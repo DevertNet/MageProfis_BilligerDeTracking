@@ -1,0 +1,4 @@
+app/code/local/MageProfis/BilligerDeTracking                                    app/code/local/MageProfis/BilligerDeTracking
+app/design/frontend/base/default/layout/MageProfis_BilligerDeTracking.xml       app/design/frontend/base/default/layout/MageProfis_BilligerDeTracking.xml
+app/design/frontend/base/default/template/mageprofis/billigerdetracking         app/design/frontend/base/default/template/mageprofis/billigerdetracking
+app/etc/modules/MageProfis_BilligerDeTracking.xml                               app/etc/modules/MageProfis_BilligerDeTracking.xml

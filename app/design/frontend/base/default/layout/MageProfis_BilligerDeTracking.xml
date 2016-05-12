@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <!--
+    <default>
+        <block type="core/template" name="billigerde_tracking.checkout_success" template="mageprofis/billigerdetracking/checkout_success.phtml"></block>
+        <reference name="before_body_end">
+            <action method="append" ifconfig="checkout/billigerde_tracking/active">
+                <block>billigerde_tracking.checkout_success</block>
+            </action>
+        </reference>
+    </default>
+    -->
+    
+    <checkout_onepage_success>
+        <block type="core/template" name="billigerde_tracking.checkout_success" template="mageprofis/billigerdetracking/checkout_success.phtml"></block>
+        <reference name="before_body_end">
+            <action method="append" ifconfig="checkout/billigerde_tracking/active">
+                <block>billigerde_tracking.checkout_success</block>
+            </action>
+        </reference>
+    </checkout_onepage_success>
+    
+    <!-- Maybe needed in the feature...
+    <onepagecheckout_index_success>
+        <reference name="content">
+            <block type="core/template" name="zanox_checkout_success" template="zanox/zanox_success.phtml" after="-"></block>
+        </reference>
+    </onepagecheckout_index_success>
+    -->
+
+
+</layout>

@@ -1,0 +1,22 @@
+<?php
+$_helper = Mage::helper('mageprofis_billigerdetracking');
+$order = Mage::getModel('sales/order')->load(Mage::getSingleton('checkout/session')->getLastOrderId());
+?>
+<?php if($order->getId()): ?>
+    <!-- billiger.de Tracking-Code -->
+    <?php 
+        $items = $order->getAllVisibleItems();
+        $out = array();
+        $outx = array();
+        $count = 1;
+        foreach($items as $item):
+            $out[] = "aid_".$count."=".urlencode($item->getSku());
+            $out[] = "name_".$count."=".urlencode($item->getName());
+            $out[] = "cnt_".$count."=".$item->getQtyOrdered();
+            $out[] = "val_".$count."=".$item->getPriceInclTax();
+            $count++;
+        endforeach;
+    ?>
+    <img src="https://billiger.de/sale?shop_id=<?php echo $_helper->getShopId() ?>&oid=<?php echo $order->getIncrementId();?>&<?php echo implode("&", $out)?>" width="1" height="1" border="0" alt="" />
+    <!-- billiger.de Tracking-Code -->
+<?php endif; ?>
